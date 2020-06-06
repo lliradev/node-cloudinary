@@ -1,45 +1,44 @@
 {
-    "name": "webapp-mean",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "dev": "cross-env NODE_ENV=development nodemon server/index.js",
-        "start": "cross-env NODE_ENV=production node server/index.js",
-        "test": "nyc mocha --timeout=10000 --exit"
-    },
-    "keywords": [],
-    "author": "Luis Lira",
-    "license": "ISC",
-    "dependencies": {
-        "async": "^3.1.0",
-        "bcryptjs": "^2.4.3",
-        "cloudinary": "^1.14.0",
-        "cors": "^2.8.5",
-        "cross-env": "^5.2.0",
-        "dotenv": "^8.0.0",
-        "express": "^4.17.1",
-        "express-pdf": "^1.2.2",
-        "fs-extra": "^8.1.0",
-        "html-pdf": "^2.2.0",
-        "jsonwebtoken": "^8.5.1",
-        "lodash": "^4.17.11",
-        "mongoose": "^5.6.2",
-        "morgan": "^1.9.1",
-        "multer": "^1.4.1",
-        "nodemailer": "^6.3.0",
-        "passport": "^0.4.0",
-        "passport-local": "^1.0.0",
-        "pdfkit": "^0.10.0",
-        "phantomjs-prebuilt": "^2.1.16"
-    },
-    "devDependencies": {
-        "chai": "^4.2.0",
-        "mocha": "^6.2.0",
-        "nodemon": "^1.19.1",
-        "nyc": "^14.1.1",
-        "sinon": "^7.3.2",
-        "sinon-mongoose": "^2.3.0",
-        "supertest": "^4.0.2"
-    }
+  "name": "webapp-mean",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon src/index.js",
+    "start": "cross-env NODE_ENV=production node src/index.js"
+  },
+  "keywords": [],
+  "author": "Luis Lira",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.1.0",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.14.0",
+    "cors": "^2.8.5",
+    "cross-env": "^5.2.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-pdf": "^1.2.2",
+    "fs-extra": "^8.1.0",
+    "html-pdf": "^2.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.6.2",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "nodemailer": "^6.3.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pdfkit": "^0.10.0",
+    "phantomjs-prebuilt": "^2.1.16"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1",
+    "sinon": "^7.3.2",
+    "sinon-mongoose": "^2.3.0",
+    "supertest": "^4.0.2"
+  }
 }

@@ -1,9 +1,0 @@
-<app-header></app-header>
-<!-- CONTENT -->
-<div *ngIf="!user.isLoggedIn(); else loggedOut">
-  <router-outlet></router-outlet>
-</div>
-
-<ng-template #loggedOut>
-  <app-sidenav></app-sidenav>
-</ng-template>

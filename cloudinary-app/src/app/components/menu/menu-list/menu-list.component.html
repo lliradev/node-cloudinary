@@ -1,0 +1,22 @@
+<div class="container">
+  <ul class="collapsible">
+    <li *ngFor="let menu of menuService.menus | paginate: {itemsPerPage: 6, currentPage: p}">
+      <div class="collapsible-header">
+        <a href="{{ menu.image }}" target="_blank" rel="noopener noreferrer">
+          <i class="material-icons">launch</i>
+        </a>
+        {{ menu.name }}
+      </div>
+      <div class="collapsible-body">
+        <p>{{ menu.type_name }}</p>
+        <p>{{ menu.description }}</p>
+        <p>{{ menu.price }}</p>
+        <img class="responsive-img center" src="{{ menu.image }}" alt="Image">
+        <div class="right-align">
+          <a mat-button [routerLink]="['/menus/edit', menu._id]" color="primary">Editar</a>
+          <a mat-button (click)="onDeleteMenu(menu._id)" color="warn">Eliminar</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

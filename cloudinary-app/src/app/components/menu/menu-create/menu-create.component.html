@@ -1,0 +1,43 @@
+<div class="container">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <div class="card" *ngIf="!isLoading">
+    <form [formGroup]="menuForm" (ngSubmit)="onAddMenu()">
+      <div class="card-content">
+        <div class="row">
+          <div class="col s12">
+            <label>Clasificación</label>
+            <select formControlName="type">
+              <option value="" disabled selected>Elige una opción</option>
+              <option value="1">Excelente</option>
+              <option value="2">Buena</option>
+              <option value="3">Regular</option>
+              <option value="4">Mala</option>
+              <option value="5">Pesima</option>
+            </select>
+          </div>
+          <div class="input-field col s12">
+            <input type="text" formControlName="name" placeholder="Ingrese nombre">
+          </div>
+          <div class="input-field col s12">
+            <textarea formControlName="description" class="materialize-textarea" placeholder="Escriba una descripcion">
+            </textarea>
+          </div>
+          <div class="input-field col s12">
+            <input type="number" formControlName="price" placeholder="Ingrese precio">
+          </div>
+          <div class="input-field col s12">
+            <a mat-raised-button (click)="image.click()">Seleccionar una imagen</a>
+            <input #image type="file" id="image" (change)="onSelectedFile($event)" accept="image/*">
+          </div>
+          <!-- SHOW IMAGE -->
+          <img [src]="thumbnail" class="center responsive-img">
+        </div>
+      </div>
+      <div class="card-action">
+        <input type="hidden" formControlName="_id">
+        <button mat-raised-button color="accent" class="btn">Guardar</button>
+        <button mat-raised-button color="warn" type="button" class="btn right" (click)="onCancel()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>

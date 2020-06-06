@@ -1,4 +1,6 @@
 node_modules
 .env
-server/public/uploads
+src/public/uploads
 .nyc_output
+.idea
+.vscode
